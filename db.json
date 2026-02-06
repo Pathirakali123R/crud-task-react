@@ -4,7 +4,7 @@
       "firstName": "Raj",
       "lastName": "C",
       "phone": "8838812724",
-      "email": "pathirakalipathirakali1@gmail.com",
+      "email": "raj123@gmail.com",
       "gender": "Male",
       "bloodgroup": "O+",
       "id": 3,
@@ -29,13 +29,13 @@
       "id": 5
     },
     {
-      "firstName": "Raj",
-      "lastName": "C",
-      "phone": "9884539359",
-      "email": "dholu@gmail.com",
-      "gender": "Female",
-      "bloodgroup": "B+",
-      "id": 6
+      "firstName": "New Users",
+      "lastName": "M",
+      "phone": "8675378009",
+      "email": "raj123@gmail.com",
+      "gender": "Male",
+      "bloodgroup": "B-",
+      "id": 7
     }
   ]
 }

@@ -71,7 +71,7 @@ function UserModal({ show, setShow, fetchUsers, editUser }) {
         await axios.put(
           `http://localhost:3000/users/${editUser.id}`,
           form
-        );
+        ); 
       } else {
         await axios.post("http://localhost:3000/users", form);
       }
@@ -104,7 +104,7 @@ function UserModal({ show, setShow, fetchUsers, editUser }) {
           <select
             name={field.name}
             className={`form-control ${errors[field.name] ? "is-invalid" : ""}`}
-            value={form[field.name]}
+value={form[field.name] || ""}
             onChange={handleChange}
           >
             <option value="">Select {field.label}</option>
@@ -112,12 +112,20 @@ function UserModal({ show, setShow, fetchUsers, editUser }) {
               <option key={i} value={opt}>{opt}</option>
             ))}
           </select>
-        ) : (
+        )  : field.type === "textarea" ? (
+  <textarea
+    name={field.name}
+    className="form-control"
+    value={form[field.name] || ""}
+    onChange={handleChange}
+  />
+
+):(
           <input
             type={field.type}
             name={field.name}
             className={`form-control ${errors[field.name] ? "is-invalid" : ""}`}
-            value={form[field.name]}
+value={form[field.name] || ""}
             onChange={handleChange}
           />
         )}
