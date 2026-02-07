@@ -69,11 +69,11 @@ function UserModal({ show, setShow, fetchUsers, editUser }) {
     try {
       if (editUser) {
         await axios.put(
-          `http://localhost:3000/users/${editUser.id}`,
+          `https://crud-json-server.onrender.com/users/${editUser.id}`,
           form
         ); 
       } else {
-        await axios.post("http://localhost:3000/users", form);
+        await axios.post("https://crud-json-server.onrender.com/users", form);
       }
 
       fetchUsers();
@@ -112,15 +112,7 @@ value={form[field.name] || ""}
               <option key={i} value={opt}>{opt}</option>
             ))}
           </select>
-        )  : field.type === "textarea" ? (
-  <textarea
-    name={field.name}
-    className="form-control"
-    value={form[field.name] || ""}
-    onChange={handleChange}
-  />
-
-):(
+        ) : (
           <input
             type={field.type}
             name={field.name}
