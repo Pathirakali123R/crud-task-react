@@ -13,7 +13,7 @@ function App() {
   const [editUser, setEditUser] = useState(null);
 
   const fetchUsers = async () => {
-    const res = await axios.get("https://crud-json-server.onrender.com/users");
+    const res = await axios.get("https://crud-json-server-1.onrender.com/users");
     setUsers(res.data);
   };
 
@@ -23,7 +23,7 @@ function App() {
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure want to delete this user?")) return;
-    await axios.delete(`https://crud-json-server.onrender.com/users/${id}`);
+    await axios.delete(`https://crud-json-server-1.onrender.com/users/${id}`);
     fetchUsers();
   };
 

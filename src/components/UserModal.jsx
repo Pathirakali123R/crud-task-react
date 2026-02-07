@@ -69,11 +69,11 @@ function UserModal({ show, setShow, fetchUsers, editUser }) {
     try {
       if (editUser) {
         await axios.put(
-          `https://crud-json-server.onrender.com/users/${editUser.id}`,
+          `https://crud-json-server-1.onrender.com/users/${editUser.id}`,
           form
         ); 
       } else {
-        await axios.post("https://crud-json-server.onrender.com/users", form);
+        await axios.post("https://crud-json-server-1.onrender.com/users", form);
       }
 
       fetchUsers();
